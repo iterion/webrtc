@@ -343,9 +343,9 @@ pub(crate) async fn add_data_media_section(
         media_title: None,
         connection_information: Some(ConnectionInformation {
             network_type: "IN".to_owned(),
-            address_type: "IP4".to_owned(),
+            address_type: "IP6".to_owned(),
             address: Some(Address {
-                address: "0.0.0.0".to_owned(),
+                address: "::".to_owned(),
                 ttl: None,
                 range: None,
             }),
@@ -518,9 +518,9 @@ pub(crate) async fn add_transceiver_sdp(
             // In addition this makes our SDP compliant with RFC 4566 Section 5.7: https://datatracker.ietf.org/doc/html/rfc4566#section-5.7
             connection_information: Some(ConnectionInformation {
                 network_type: "IN".to_owned(),
-                address_type: "IP4".to_owned(),
+                address_type: "IP6".to_owned(),
                 address: Some(Address {
-                    address: "0.0.0.0".to_owned(),
+                    address: "::".to_owned(),
                     ttl: None,
                     range: None,
                 }),

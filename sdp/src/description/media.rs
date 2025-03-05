@@ -101,9 +101,9 @@ impl MediaDescription {
             media_title: None,
             connection_information: Some(ConnectionInformation {
                 network_type: "IN".to_string(),
-                address_type: "IP4".to_string(),
+                address_type: "IP6".to_string(),
                 address: Some(Address {
-                    address: "0.0.0.0".to_string(),
+                    address: "::".to_string(),
                     ttl: None,
                     range: None,
                 }),

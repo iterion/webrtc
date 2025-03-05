@@ -306,8 +306,8 @@ impl SessionDescription {
                     .unwrap_or_else(|_| Duration::from_secs(0))
                     .subsec_nanos() as u64,
                 network_type: "IN".to_string(),
-                address_type: "IP4".to_string(),
-                unicast_address: "0.0.0.0".to_string(),
+                address_type: "IP6".to_string(),
+                unicast_address: "::".to_string(),
             },
             session_name: "-".to_string(),
             session_information: None,
