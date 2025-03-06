@@ -765,7 +765,7 @@ impl Agent {
                 return;
             }
 
-            let network = NetworkType::Udp4.to_string();
+            let network = NetworkType::Udp6.to_string();
             let net2 = Arc::clone(&net);
             let agent_internal2 = Arc::clone(&agent_internal);
 
@@ -777,7 +777,7 @@ impl Agent {
 
                 let (loc_conn, rel_addr, rel_port) =
                     if url.proto == ProtoType::Udp && url.scheme == SchemeType::Turn {
-                        let loc_conn = match net2.bind(SocketAddr::from_str("0.0.0.0:0")?).await {
+                        let loc_conn = match net2.bind(SocketAddr::from_str("[::]:0")?).await {
                             Ok(c) => c,
                             Err(err) => {
                                 log::warn!(
